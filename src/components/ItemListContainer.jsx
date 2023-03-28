@@ -33,9 +33,7 @@ function ItemListContainer(props) {
 
     return (
     <>
-        <div className = "titulo_container">
-            <h3>Item List Container</h3>
-        </div>
+        {/* <ItemList se reemplaza por Cards */}
         <Cards />
     </>
        

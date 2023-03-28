@@ -1,10 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Item from './Item';
 
-<>
-  <Item />
-</>
+
 
 function Card({image, id, title, category, url, price}) {
   return (

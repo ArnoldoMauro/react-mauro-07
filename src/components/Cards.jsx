@@ -4,7 +4,7 @@ import '../css/cards.css';
 import './ItemListContainer';
 import products from '../data/product';
 
-
+// reemplaza al componente ItemList.jsx 
 function Cards() {
   // console.log(cards)
   return (
