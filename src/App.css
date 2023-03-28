@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: rgb(197,198,153); 
   height: 100vh;
@@ -38,10 +43,6 @@ body {
 }
 
 .logo-text {
-  text-align: center;
-}
-
-.slogan {
   text-align: center;
 }
 
@@ -95,15 +96,35 @@ body {
 
 #cart_menu_num {
   position: absolute;
-  top: 0;
-  left: 55%;
+  top: 0px;
+  left: 100%;
   background: red;
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 2px;
+  padding-top: 4px;
+  font-size: 1rem;
 }
+
+.cart-icono {
+  position: absolute;
+  top: 40px;
+  left: 90%;
+}
+
+.titulo_container {
+  position: absolute;
+  left: 60px;
+  top: 130px;
+}
+
+.titulo_DContainer {
+  position: absolute;
+  left: 60px;
+  top: 600px;
+}
+

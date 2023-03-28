@@ -8,7 +8,10 @@ import products from '../data/product';
 function Cards() {
   // console.log(cards)
   return (
+    
+    
     <div className='container d-flex justify-content-center align-items-center h-100'>
+   
         <div className="row">
           {
             products.map((products) => (

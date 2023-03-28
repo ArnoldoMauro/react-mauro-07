@@ -33,7 +33,9 @@ function ItemListContainer(props) {
 
     return (
     <>
-        <h3>Item List Container</h3>
+        <div className = "titulo_container">
+            <h3>Item List Container</h3>
+        </div>
         <Cards />
     </>
        

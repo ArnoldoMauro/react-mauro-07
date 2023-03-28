@@ -7,23 +7,23 @@ import React from 'react'
 function Item(products) {
     const [fav, setFav] = useState (false);
 
-    function handleFavorite() {
-        setFav(!fav);
-    }
+    // function handleFavorite() {
+    //     setFav(!fav);
+    // }
 
-    let classNameFavorite;
-    if (fav === true) {
-        classNameFavorite = "item-card_favicon favorite";
-    } else{
-        classNameFavorite = "item-card_favicon";
-    }
+    // let classNameFavorite;
+    // if (fav === true) {
+    //     classNameFavorite = "item-card_favicon favorite";
+    // } else{
+    //     classNameFavorite = "item-card_favicon";
+    // }
 
-  return (
-    <div id={products.id} className = "item-card">
-        <Card />
+//   return (
+    // <div id={products.id} className = "item-card">
+//         <Card />
       
-    </div>
-  )
+//     </div>
+//   )
 }
 
 export default Item

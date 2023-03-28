@@ -2,17 +2,19 @@ import React from "react";
 import {Link} from "react-router-dom"
 import '../App.css';
 import '../images/bodega-logo.png';
+import logo from '../images/bodega-logo.png';
+import carrito from '../images/shopping-cart_1.png';
 
 function BootstrapNavbar() {
     return (
        
         
   <div>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary"> 
+    <nav className="navbar fixed-top navbar-expand-lg bg-light "> 
       <div className='container-fluid' >
       
         <Link className="navbar-brand" to="/">
-          <img src = '../images/bodega-logo.png' alt ='Bodega de Campo' width={70}/>
+        <img src ={logo} alt ='Bodega de Campo' width={70}/>
         </Link>
         
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +35,6 @@ function BootstrapNavbar() {
                 <li><Link className="dropdown-item" to="/categorys/cabernet_sauvignon">Cabernet Sauvignon</Link></li>
                 <li><Link className="dropdown-item" to="/categorys/syrah">Syrah</Link></li>
                 <li><Link className="dropdown-item" to="/categorys/merlot">Merlot</Link></li>
-                  {/* <li><hr className="dropdown-divider" /></li> */}
                 <li><Link className="dropdown-item" to="#!">Syrah</Link></li>
               </ul>
             </li>
@@ -45,19 +46,17 @@ function BootstrapNavbar() {
           </ul>
           
          
-          {/* <div className="ancho logo">
-            <p className="logo-text"><a href='index.html'>BODEGA DE CAMPO <br></br> Tienda on-line</a></p>
-          </div> */}
-
+          
           {/* Carrito */}
-          {/* <Link to="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"/> */}
+          
           <div className="cart-menu align-items-center d-flex">
             <div className="sidebar-social">
               <ul>
                 <li>
-                  <Link to="../images/shopping-cart_1.png" className="cart" title="Carrito" target="_blank" rel="nofollow"><i className="fas fa-shopping-cart"></i><span></span> 
+                  <div className="cart-icono">
+                    <img src ={carrito} alt ='icono carrito' width={30}/>
                     <span id="cart_menu_num" data-action="cart-can" className="badge rounded-circle">0</span>
-                  </Link> 
+                  </div> 
                 </li>
               </ul>
             </div>
