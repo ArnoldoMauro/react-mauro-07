@@ -10,7 +10,7 @@ function Cards() {
   return (
     
     
-    <div className='container d-flex justify-content-center align-items-center h-100'>
+    <div className='container d-flex justify-content-center align-items-center'>
    
         <div className="row">
           {

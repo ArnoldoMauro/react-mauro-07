@@ -12,6 +12,7 @@ function App() {
     </><BrowserRouter>
         
         <BootstrapNavbar /> 
+        <br /> <br /><br /> <br /><br />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categorys/:id" element={<ItemDetailContainer />} />

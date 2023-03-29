@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Card({image, id, title, category, url, price}) {
   return (
-    <div className='card text-center bg-dark'>
+    <div className='card text-center bg-dark mt-1'>
         <img src={image} alt="imagen del producto" />
         <div className="card-body">
 
