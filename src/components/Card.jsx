@@ -14,8 +14,9 @@ function Card({image, id, title, category, url, price}) {
       <small className='text-light'>{category}</small>
       <p className='card-text text-secondary'>{price}
       </p>
+      
       <Link to={`/categorys/${id}`} className='btn btn-sm btn-outline-secondary rounded-2'>
-        Mas Detalles
+        Ver Detalles
       </Link> 
     </div>
   )

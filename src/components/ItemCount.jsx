@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function ItemCount() {
+function ItemCount({onAddToCart}) {
     const [count, setCount] = useState(0);
     const limite = 5;
 
@@ -11,15 +11,21 @@ function ItemCount() {
     }
 
     function handleSubstract() {
-        // if (llegamos a 0) return
-
+        // if ( preguntamos si llegamos a 0) 
+      setCount = count - 1;
     }
 
   return (
     <div>
-      <buttom> - </buttom>
+      <button color="red" onPress={handleSubstract}> 
+        - 
+      </button>
       <span> {count} </span>
-      <buttom onclick = {() => setCount(count+1)}> + </buttom>
+      <button color="blue" onclick = {(onAddToCart) => setCount(count+1)}>  
+      {/* <button color="blue" onPress={handleAdd}> */}
+        + 
+      </button>
+      <button onClick={onAddToCart}> Agregar al Carrito</button> 
     </div>
   )
 }

@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import products from '../data/product';
 import {useParams} from 'react-router-dom';
 import ItemDetail from './ItemDetail';
+import ItemCount from './ItemCount';
+import {useContext} from 'react';
+import {cartContext} from '../App';
 
 
 function getSingleItems(idURL) {
@@ -22,6 +25,8 @@ function ItemDetailContainer () {
 
     let {id} = useParams();
     console.log(id);
+    const {cart} = useContext(cartContext);
+    console.log("Cart:", cart)
 
     //la funcion useEffect() es para que el array se renderize una sola vez (sino se repite)
     useEffect(
@@ -33,8 +38,16 @@ function ItemDetailContainer () {
             })
         }, []
     );
+
+        function onAddToCart(count) {
+            cart.push(product);
+        }
+
     return (
-        <ItemDetail product = {product} />    
+        <>
+        <ItemDetail product={product} />
+        <ItemCount onAddToCart={onAddToCart} />
+        </>
     );  
 }
 
