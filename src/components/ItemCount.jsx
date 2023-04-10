@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import Button from './Button';
+import ItemDetailContainer from './ItemDetailContainer';
 
 function ItemCount({onAddToCart}) {
     const [count, setCount] = useState(0);
-    const limite = 5;
-
+    
     function handleAdd() {
         
         // if (stock alcance) return
@@ -15,17 +16,23 @@ function ItemCount({onAddToCart}) {
       setCount = count - 1;
     }
 
+    function onAddToCart () {
+      console.log ("agregaste al carrito");
+    }
+
+    function handleAddToCart() {
+      props.onAddToCart(count)
+    }
   return (
     <div>
-      <button color="red" onPress={handleSubstract}> 
+      <Button color="red" onPress={handleSubstract}> 
         - 
-      </button>
+      </Button>
       <span> {count} </span>
-      <button color="blue" onclick = {(onAddToCart) => setCount(count+1)}>  
-      {/* <button color="blue" onPress={handleAdd}> */}
+      <Button color="blue" onPress = {handleAdd}>  
         + 
-      </button>
-      <button onClick={onAddToCart}> Agregar al Carrito</button> 
+      </Button>
+      <Button onPress={handleAddToCart}> Agregar al Carrito</Button> 
     </div>
   )
 }

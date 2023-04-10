@@ -29,42 +29,29 @@ function BootstrapNavbar() {
             </li>
             
             <li className="nav-item">
-              <Link className="nav-link" aria-current="#" to="/">Malbec</Link>
+              <Link className="nav-link" aria-current="/categorys/Malbec" to="/">Malbec</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="#" to="/">Cabernet Sauvignon</Link>
+              <Link className="nav-link" aria-current="/categorys/Cabernet" to="/">Cabernet Sauvignon</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="#" to="/">Syrah</Link>
+              <Link className="nav-link" aria-current="/categorys/Syrah" to="/">Syrah</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="#" to="/">Merlot</Link>
+              <Link className="nav-link" aria-current="/categorys/Merlot" to="/">Merlot</Link>
             </li>
-
-            {/* <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/categorys" role="button" data-bs-toggle="dropdown" aria-expanded="false">Varietales</Link>
-              <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/categorys/malbec">Malbec</Link></li>
-                <li><Link className="dropdown-item" to="/categorys/cabernet_sauvignon">Cabernet Sauvignon</Link></li>
-                <li><Link className="dropdown-item" to="/categorys/syrah">Syrah</Link></li>
-                <li><Link className="dropdown-item" to="/categorys/merlot">Merlot</Link></li>
-                <li><Link className="dropdown-item" to="#!">Syrah</Link></li>
-              </ul>
-            </li> */}
             
+            {/* Formulario */}  
             <li className="nav-item">
               <Link className="nav-link" to="#">Contacto</Link>
             </li>
             
           </ul>
           
-         
-          
           {/* Carrito */}
-          
           <div className="cart-menu align-items-center d-flex">
             <div className="sidebar-social">
               <ul>
@@ -77,10 +64,7 @@ function BootstrapNavbar() {
               </ul>
             </div>
           </div>
-          {/* <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form> */}
+          
         </div>
       </div>
     </nav>

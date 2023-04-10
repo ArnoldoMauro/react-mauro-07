@@ -3,7 +3,6 @@ import '../App';
 import './Cards';
 import Item from './Item';
 import '../App.css';
-import Cards from './Cards'
 import products from '../data/product';
 import {useParams} from 'react-router-dom';
 
@@ -55,17 +54,17 @@ function ItemListContainer(products) {
     
     return (
     <>
-    {products.map((products) => (
+    {product.map((products) => (
       <Item
       key={products.id}
       id={products.id}
+      imagen={products.image} 
       title={products.title}
       price={products.price}
       category={products.category}
-      imagen={products.imagen} />
+      />
     ))
     }
-        {/* <Item /> */}
         {/* <ItemList se reemplaza por Cards */}
         {/* <Cards /> */}
     </>

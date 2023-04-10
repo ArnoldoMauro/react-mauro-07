@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import products from '../data/product';
 import {useParams} from 'react-router-dom';
 import ItemDetail from './ItemDetail';
+import Item from './Item';
 import ItemCount from './ItemCount';
 import {useContext} from 'react';
 import {cartContext} from '../App';
@@ -12,7 +13,7 @@ function getSingleItems(idURL) {
         setTimeout(
             () => {
             const encontrado = products.find(item => {
-                return(item.id === parseInt(idURL))    
+                return(products.id === parseInt(idURL))    
             })
             resolve(encontrado)
             }, 2000)
@@ -40,6 +41,8 @@ function ItemDetailContainer () {
     );
 
         function onAddToCart(count) {
+            console.log("Agregaste al carrito este producto", product.title)
+            console.log("Cantidad seleccionada", count)
             cart.push(product);
         }
 

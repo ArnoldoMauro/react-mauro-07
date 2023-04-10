@@ -1,6 +1,9 @@
+
 import {useState} from 'react';
-import Card from './Card';
+import products from '../data/product';
 import React from 'react'
+import '../css/item.css';
+
 
 
 
@@ -17,26 +20,28 @@ function Item(products) {
     } else{
       classNameFavorite = "item-card_favicon";
     }
-
-  
     
   return (  
-    <div id={products.id} className="item-card">
-      {/* <Card /> */}
-      <div className='item-card_img'>
-        <h2>{products.img}</h2>
-      </div>
+    <link to={`/categorys/${products.id}`}>   
+      <div className="item-card"
+        id={products.id}> 
+        <div className='item-card_img'>
+          <img src={products.image} alt="Imagen del producto" />
+        </div>
 
-      <div className='item-card_header'>
-        <h4> $ {products.title}</h4>
-        <small>{products.category}</small>
-      </div>
+        <div className='item-card_header'>
+          <h4>{products.title}</h4>
+          <h6>{products.category}</h6>
+        </div>
     
-      <div className='item-card_detail'>
-        <h2>{products.price}</h2>
-      </div>
-      <button>Ver Detalle</button>
-    </div>
+        <div className='item-card_detail'>
+          <h3>{products.price}</h3>
+        </div>    
+        <div>  
+          <button className='btn'>Ver Detalle</button>
+        </div>
+      </div>    
+    </link>  
   )
 }
 

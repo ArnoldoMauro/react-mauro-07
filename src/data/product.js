@@ -16,7 +16,7 @@ const products = [
     {
       id: 1,
       image: image1,
-      title: 'Cadus Tupungato Appellation',
+      title: 'Cadus Tupungato',
       price: '$5.800',
       category: 'Malbec'
       // url: 
@@ -71,7 +71,7 @@ const products = [
   {
     id: 8,
     image: image8,
-    title: 'Angelica Zapata Merlot Alta',
+    title: 'Angelica Zapata Alta',
     price: '$5.900',
     category: 'Merlot',
     // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/czaza-00041-eabd65d1fb08eeecb915736766249349-480-0.jpg'
@@ -79,14 +79,14 @@ const products = [
   {
     id: 9,
     image: image9,
-    title: 'Staphyle Premium Merlot',
+    title: 'Staphyle Premium',
     price: '$2.800',
     category: 'Merlot',
     // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/preeeemiyummerlot1-8cd74712606b64bf6916128051740347-480-0.jpg'
   },
   {id: 10,
   image: image10,
-  title: 'D.V Catena Malbec',
+  title: 'D.V Catena',
   price: '$7.480',
   category: 'Malbec',
   // url: 'https://www.cavasdelpozo.com.ar/productos/dvcatenamalbecmalbecbodegacatenazapata/?variant=111861414'
@@ -94,14 +94,14 @@ const products = [
 {
   id: 11,
   image: image11,
-  title: 'Ruca Malen Merlot 2005',
+  title: 'Ruca Malen 2005',
   price: '$28.400',
   category: 'Merlot',
   // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/ruca-malen-merlot1-fdf85b951660df377b15895583264445-480-0.jpg'
 },
 {id: 12,
 image: image12,
-title: 'Pyros Appellation Syrah',
+title: 'Pyros Appellation',
 price: '$2.690',
 category: 'Syrah',
 // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/pyrosappellationsyrahhhh1-351b4d360c539a634216014990607948-480-0.jpg'
