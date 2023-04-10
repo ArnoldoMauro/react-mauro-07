@@ -1,5 +1,6 @@
 
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 import products from '../data/product';
 import React from 'react'
 import '../css/item.css';
@@ -7,7 +8,7 @@ import '../css/item.css';
 
 
 
-function Item(products) {
+function Item({id, title, imagen, price, category}) {
     const [fav, setFav] = useState (false);
 
     function handleFavorite() {
@@ -22,11 +23,11 @@ function Item(products) {
     }
     
   return (  
-    <link to={`/categorys/${products.id}`}>   
+    <Link to={`/categorys/${products.id}`}>   
       <div className="item-card"
-        id={products.id}> 
+        id={id}> 
         <div className='item-card_img'>
-          <img src={products.image} alt="Imagen del producto" />
+          <img src={imagen} alt="Imagen del producto" />
         </div>
 
         <div className='item-card_header'>
@@ -41,7 +42,7 @@ function Item(products) {
           <button className='btn'>Ver Detalle</button>
         </div>
       </div>    
-    </link>  
+    </Link>  
   )
 }
 
