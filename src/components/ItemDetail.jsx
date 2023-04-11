@@ -1,6 +1,8 @@
 import React from 'react';
+import ItemCount from './ItemCount';
+// import {handleAddToCart} from './ItemDetailContainer'
 
-function ItemDetail({product}) {
+function ItemDetail({product, handleAddToCart}) {
     return (
         <div className="d-flex justify-content-center">    
         <div className="card text-center bg-dark" style={{ width: '400px' }}>
@@ -11,7 +13,7 @@ function ItemDetail({product}) {
                 <small className='text-light'>{product.category}</small>
                 <p className='card-text text-secondary'>{product.price}
                 </p>
-                <ItemCount onAddToCart={handleAddToCart} />
+                {/* <ItemCount onAddToCart={handleAddToCart} /> */}
             </div>
             
         </div>

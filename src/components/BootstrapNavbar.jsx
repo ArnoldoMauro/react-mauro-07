@@ -29,19 +29,19 @@ function BootstrapNavbar() {
             </li>
             
             <li className="nav-item">
-              <Link className="nav-link" aria-current="/categorys/Malbec" to="/">Malbec</Link>
+              <Link className="nav-link" aria-current="/categorys/Malbec" to="/categorys/Malbec">Malbec</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="/categorys/Cabernet" to="/">Cabernet Sauvignon</Link>
+              <Link className="nav-link" aria-current="/categorys/Cabernet" to="/categorys/Cabernet">Cabernet</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="/categorys/Syrah" to="/">Syrah</Link>
+              <Link className="nav-link" aria-current="/categorys/Syrah" to="/categorys/Syrah">Syrah</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" aria-current="/categorys/Merlot" to="/">Merlot</Link>
+              <Link className="nav-link" aria-current="/categorys/Merlot" to="/categorys/Merlot">Merlot</Link>
             </li>
             
             {/* Formulario */}  

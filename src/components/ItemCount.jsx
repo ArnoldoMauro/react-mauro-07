@@ -16,13 +16,10 @@ function ItemCount({onAddToCart}) {
       setCount = count - 1;
     }
 
-    function onAddToCart () {
-      console.log ("agregaste al carrito");
-    }
-
     function handleAddToCart() {
-      props.onAddToCart(count)
+      onAddToCart(count)
     }
+    
   return (
     <div>
       <Button color="red" onPress={handleSubstract}> 

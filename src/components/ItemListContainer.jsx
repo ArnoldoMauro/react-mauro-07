@@ -49,7 +49,7 @@ function ItemListContainer(products) {
               getItemsByCategory(categoryid).then((respuesta) => 
               setProducts(respuesta));
             }
-        }, []
+        }, [categoryid]
             )  
     
     return (
