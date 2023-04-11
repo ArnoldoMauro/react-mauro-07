@@ -23,7 +23,7 @@ function Item({id, title, imagen, price, category}) {
     }
     
   return (  
-    <Link to={`/detail/${products.id}`}>   
+    <Link to={`/detail/${id}`}>   
       <div className="item-card"
         id={id}> 
         <div className='item-card_img'>

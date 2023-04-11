@@ -13,7 +13,7 @@ function getSingleItems(idURL) {
         setTimeout(
             () => {
             const encontrado = products.find(item => {
-                return(products.id === parseInt(idURL))    
+                return(item.id === parseInt(idURL))    
             })
             resolve(encontrado)
             }, 2000)
@@ -22,7 +22,7 @@ function getSingleItems(idURL) {
 }
 
 function ItemDetailContainer () {
-    const [product, setProduct] = useState ([]); //useState actualiza el estado del componente 
+    const [product, setProduct] = useState ({}); //useState actualiza el estado del componente 
 
     let {id} = useParams();
     console.log(id);
