@@ -4,8 +4,11 @@ import '../App.css';
 import '../images/bodega-logo.png';
 import logo from '../images/bodega-logo.png';
 import carrito from '../images/shopping-cart_1.png';
+import {useContext} from 'react';
+import {cartContext} from '../context/cartContext';
 
 function BootstrapNavbar() {
+  const {cart} = useContext(cartContext);
     return (
        
         
@@ -51,14 +54,14 @@ function BootstrapNavbar() {
             
           </ul>
           
-          {/* Carrito */}
+          {/* CartWidget */}
           <div className="cart-menu align-items-center d-flex">
             <div className="sidebar-social">
               <ul>
                 <li>
                   <div className="cart-icono">
                     <img src ={carrito} alt ='icono carrito' width={30}/>
-                    <span id="cart_menu_num" data-action="cart-can" className="badge rounded-circle">0</span>
+                    <span id="cart_menu_num" data-action="cart-can" className="badge rounded-circle">{cart.length}</span>
                   </div> 
                 </li>
               </ul>

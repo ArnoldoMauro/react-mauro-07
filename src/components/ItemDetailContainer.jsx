@@ -5,7 +5,7 @@ import ItemDetail from './ItemDetail';
 import Item from './Item';
 import ItemCount from './ItemCount';
 import {useContext} from 'react';
-import {cartContext} from '../App';
+import { cartContext, CartProvider } from  '../context/cartContext';
 
 
 function getSingleItems(idURL) {
@@ -26,8 +26,8 @@ function ItemDetailContainer () {
 
     let {id} = useParams();
     console.log(id);
-    const {cart} = useContext(cartContext);
-    console.log("Cart:", cart)
+    const {cart, addItem} = useContext(cartContext);
+    // console.log("Cart:", cart)
 
     //la funcion useEffect() es para que el array se renderize una sola vez (sino se repite)
     useEffect(
@@ -43,7 +43,8 @@ function ItemDetailContainer () {
         function onAddToCart(count) {
             console.log("Agregaste al carrito este producto", product.title)
             console.log("Cantidad seleccionada", count)
-            cart.push(product);
+            // cart.push(product);
+            addItem(product, count);
         }
 
     return (

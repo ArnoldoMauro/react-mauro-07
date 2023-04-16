@@ -5,9 +5,6 @@ import products from '../data/product';
 import React from 'react'
 import '../css/item.css';
 
-
-
-
 function Item({id, title, imagen, price, category}) {
     const [fav, setFav] = useState (false);
 
@@ -31,14 +28,20 @@ function Item({id, title, imagen, price, category}) {
         </div>
 
         <div className='item-card_header'>
-          <h4>{products.title}</h4>
-          <h6>{products.category}</h6>
+          <br></br>
+          <h5>{title}</h5>
+          <h6>{category}</h6>
+          <h4>{price}</h4>
         </div>
     
         <div className='item-card_detail'>
-          <h3>{products.price}</h3>
+          {/* verificamos si existe una oferta con el RendCondicional -> operador logico &&  */}
+          {products && products.offer && (
+            <h4 style={{ color: "green" }}>{offer} %</h4>
+          )} 
+          
         </div>    
-        <div>  
+        <div>
           <button className='btn'>Ver Detalle</button>
         </div>
       </div>    

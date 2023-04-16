@@ -18,7 +18,8 @@ const products = [
       image: image1,
       title: 'Cadus Tupungato',
       price: '$5.800',
-      category: 'Malbec'
+      category: 'Malbec',
+      stock: 50
       // url: 
      },
     {
@@ -26,7 +27,8 @@ const products = [
       image: image2,
       title: 'Gran Sombrero',
       price: '$3.040',
-      category: 'Cabernet Sauvignon'
+      category: 'Cabernet',
+      stock: 50
       // url:
     }, 
     {
@@ -34,7 +36,8 @@ const products = [
       image: image3,
       title: 'HD Gran Reserva',
       price: '$6.800',
-      category: 'Malbec'
+      category: 'Malbec',
+      stock: 20
       // url:
     },
     {
@@ -42,7 +45,8 @@ const products = [
       image: image4,
       title: 'Luigi Bosca De Sangre',
       price: '$8.200',
-      category: 'Cabernet Sauvignon',
+      category: 'Cabernet',
+      stock: 50
       // url: 'https://shop.luigibosca.com/1315302541-luigi-bosca-de-sangre-cabernet-sauvignon/p'
     },
     {
@@ -51,14 +55,17 @@ const products = [
       title: 'Rutini',
       price: '$5.300',
       category: 'Merlot',
+      stock: 50
       // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/rutini-merlot-de-rutini1-eeca0c6d04c29d488c15918073295349-480-0.jpg'
     },
     {
       id: 6,
       image: image6,
       title: 'Catalpa',
-      price: '$4.000',
+      price: '$3.400',
       category: 'Merlot',
+      stock: 50,
+      offer: 25
       // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/catalpa-merlot1-f57326da2e874c507416547047546596-480-0.jpg'
     },
     {id: 7,
@@ -66,6 +73,7 @@ const products = [
     title: 'Pascual Toso Alta',
     price: '$6.700',
     category: 'Syrah',
+    stock: 50
     // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/pascual-toso-alta-syrah1-09609429a60261d4d716334668953419-480-0.jpg'
   },
   {
@@ -74,6 +82,7 @@ const products = [
     title: 'Angelica Zapata Alta',
     price: '$5.900',
     category: 'Merlot',
+    stock: 50
     // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/czaza-00041-eabd65d1fb08eeecb915736766249349-480-0.jpg'
   },
   {
@@ -82,6 +91,7 @@ const products = [
     title: 'Staphyle Premium',
     price: '$2.800',
     category: 'Merlot',
+    stock: 0
     // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/preeeemiyummerlot1-8cd74712606b64bf6916128051740347-480-0.jpg'
   },
   {id: 10,
@@ -89,6 +99,7 @@ const products = [
   title: 'D.V Catena',
   price: '$7.480',
   category: 'Malbec',
+  stock: 50
   // url: 'https://www.cavasdelpozo.com.ar/productos/dvcatenamalbecmalbecbodegacatenazapata/?variant=111861414'
 },
 {
@@ -97,6 +108,7 @@ const products = [
   title: 'Ruca Malen 2005',
   price: '$28.400',
   category: 'Merlot',
+  stock: 10
   // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/ruca-malen-merlot1-fdf85b951660df377b15895583264445-480-0.jpg'
 },
 {id: 12,
@@ -104,6 +116,7 @@ image: image12,
 title: 'Pyros Appellation',
 price: '$2.690',
 category: 'Syrah',
+stock: 20
 // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/pyrosappellationsyrahhhh1-351b4d360c539a634216014990607948-480-0.jpg'
 }
 

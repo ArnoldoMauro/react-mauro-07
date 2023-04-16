@@ -65,8 +65,7 @@ function ItemListContainer(products) {
       />
     ))
     }
-        {/* <ItemList se reemplaza por Cards */}
-        {/* <Cards /> */}
+        
     </>
     )
   }
