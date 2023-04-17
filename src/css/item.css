@@ -22,7 +22,8 @@ a{
     width: 300px;
     border-radius: 4px;
     box-shadow: 0px 0px 3px;
-    background-color: rgb(189, 187, 187);
+    /* background-color: rgb(189, 187, 187); */
+    background-color: #fff;
     overflow: hidden; 
     transition: all 0.20s;
     cursor: pointer;
@@ -54,6 +55,10 @@ a{
     object-fit: cover;
 }
 
+img.disabled{
+    filter: grayscale(0.9);
+}
+
 .item-card:hover{
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 01);
 }
@@ -61,7 +66,6 @@ a{
     height: 100px;
     /* padding: 12px 8px; */
     display: none;
-    /* background-color: #fff; Agrega un fondo blanco para los datos ocultos */
     padding: 10px;
     color: black;
 } 

@@ -13,7 +13,7 @@ function ItemDetail({product, handleAddToCart}) {
                 <small className='text-light'>{product.category}</small>
                 <p className='card-text text-secondary'>{product.price}
                 </p>
-                {/* <ItemCount onAddToCart={handleAddToCart} /> */}
+                
             </div>
             
         </div>

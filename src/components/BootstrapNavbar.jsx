@@ -6,6 +6,7 @@ import logo from '../images/bodega-logo.png';
 import carrito from '../images/shopping-cart_1.png';
 import {useContext} from 'react';
 import {cartContext} from '../context/cartContext';
+import CartContainer from './CartContainer/CartContainer';
 
 function BootstrapNavbar() {
   const {cart} = useContext(cartContext);
@@ -28,7 +29,7 @@ function BootstrapNavbar() {
           <ul className="navbar-nav">
             
             <li className="nav-item">
-              <Link className="nav-link" aria-current="#" to="/">Acerca_de</Link>
+              <Link className="nav-link" aria-current="/" to="/">Home</Link>
             </li>
             
             <li className="nav-item">
@@ -51,7 +52,11 @@ function BootstrapNavbar() {
             <li className="nav-item">
               <Link className="nav-link" to="#">Contacto</Link>
             </li>
-            
+
+            {/* Cart */}
+            <li>
+              <Link className="nav-link" to="/cart">Cart</Link>   
+            </li>            
           </ul>
           
           {/* CartWidget */}

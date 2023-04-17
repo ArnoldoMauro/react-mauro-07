@@ -5,6 +5,7 @@ import Item from './Item';
 import '../App.css';
 import products from '../data/product';
 import {useParams} from 'react-router-dom';
+import Loader from './Loader/Loader';
 
 // ------Mock Async Service (Asincronia)------
 // funcion que filtra por id ---
@@ -51,7 +52,12 @@ function ItemListContainer(products) {
             }
         }, [categoryid]
             )  
-    
+        
+            // si el array products está vacìo, renderiza el componente <Loader />
+            if (products.length === 0) {
+          return <Loader />
+        }
+
     return (
     <>
     {product.map((products) => (
@@ -62,6 +68,8 @@ function ItemListContainer(products) {
       title={products.title}
       price={products.price}
       category={products.category}
+      offer={products.offer}
+      stock={products.stock}
       />
     ))
     }

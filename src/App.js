@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {CartProvider} from './context/cartContext';
+import CartContainer from './components/CartContainer/CartContainer';
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
     <>
     /* Provider */
     <CartProvider >
-    {/* children */}
-    <BrowserRouter>
+      {/* children */}
+      <BrowserRouter>
         
         <BootstrapNavbar /> 
         <br /> <br /><br /> <br /><br />
@@ -23,11 +24,12 @@ function App() {
 
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
           <Route path="*" element={<h2>Error 404 - Page not found</h2>} />
+          <Route path="/cart" element={<CartContainer />} />
         </Routes>
         {/* Footer */}
       </BrowserRouter>
-      </CartProvider>
-      </>
+    </CartProvider>
+    </>
   )
 }
 

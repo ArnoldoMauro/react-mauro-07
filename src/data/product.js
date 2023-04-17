@@ -37,7 +37,7 @@ const products = [
       title: 'HD Gran Reserva',
       price: '$6.800',
       category: 'Malbec',
-      stock: 20
+      stock: 0
       // url:
     },
     {
@@ -65,7 +65,7 @@ const products = [
       price: '$3.400',
       category: 'Merlot',
       stock: 50,
-      offer: 25
+      offer: 25,
       // url: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/catalpa-merlot1-f57326da2e874c507416547047546596-480-0.jpg'
     },
     {id: 7,
