@@ -53,9 +53,9 @@ function BootstrapNavbar() {
               <Link className="nav-link" to="#">Contacto</Link>
             </li>
 
-            {/* Cart */}
+            {/* Cart */}           
             <li>
-              <Link className="nav-link" to="/cart">Cart</Link>   
+              <Link className="sidebar-social" to="/cart">Cart</Link>   
             </li>            
           </ul>
           

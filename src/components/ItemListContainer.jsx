@@ -3,7 +3,7 @@ import '../App';
 import './Cards';
 import Item from './Item';
 import '../App.css';
-import products from '../data/product';
+import products from '../data/productBackup';
 import {useParams} from 'react-router-dom';
 import Loader from './Loader/Loader';
 

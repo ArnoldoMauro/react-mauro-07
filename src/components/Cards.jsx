@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import '../css/cards.css';
 import './ItemListContainer';
-import products from '../data/product';
+import products from '../data/productBackup';
 
 // reemplaza al componente ItemList.jsx 
 function Cards() {

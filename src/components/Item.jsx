@@ -1,7 +1,7 @@
 
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
-import products from '../data/product';
+import products from '../data/productBackup';
 import React from 'react'
 import '../css/item.css';
 
