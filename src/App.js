@@ -13,7 +13,7 @@ function App() {
     <>
     /* Provider */
     <CartProvider >
-      {/* children */}
+      
       <BrowserRouter>
         
         <BootstrapNavbar /> 
@@ -26,7 +26,7 @@ function App() {
           <Route path="*" element={<h2>Error 404 - Page not found</h2>} />
           <Route path="/cart" element={<CartContainer />} />
         </Routes>
-        {/* Footer */}
+        
       </BrowserRouter>
     </CartProvider>
     </>

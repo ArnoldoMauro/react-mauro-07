@@ -6,14 +6,26 @@ import Loader from './Loader/Loader';
 import ItemCount from './ItemCount';
 import {useContext} from 'react';
 import { cartContext, CartProvider } from  '../context/cartContext';
-import {getSingleItem} from '../services/firestore';
 
+
+function getSingleItems(idURL) {
+    const promesa = new Promise ((resolve, reject) => {
+        setTimeout(
+            () => {
+            const encontrado = products.find(item => {
+                return(item.id === parseInt(idURL))    
+            })
+            resolve(encontrado)
+            }, 2000)
+    });
+    return promesa;
+}
 
 function ItemDetailContainer () {
     const [product, setProduct] = useState ({}); //useState actualiza el estado del componente 
     const [addedToCart, setaddedToCart] = useState(false);
     let {id} = useParams();
-    console.log("cart:", cart);
+    console.log(id);
     const {cart, addItem, getCountInCart} = useContext(cartContext);
    
     //la funcion useEffect() es para que el array se renderize una sola vez (sino se repite)

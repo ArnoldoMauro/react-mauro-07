@@ -3,11 +3,38 @@ import '../App';
 import './Cards';
 import Item from './Item';
 import '../App.css';
-// import products from '../data/productBackup';
+import products from '../data/productBackup';
 import {useParams} from 'react-router-dom';
 import Loader from './Loader/Loader';
-import { getItems, getItemsByCategory } from '../services/firestore';
 
+
+
+
+// ------Mock Async Service (Asincronia)------
+// funcion que filtra por id ---
+ function getItems() {
+    const promesa = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve (products)
+        }, 2500);
+    });
+    return promesa;
+ }
+
+
+// funcion que filtra por categorias --- 
+function getItemsByCategory(categoryURL) {
+    const promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // quiero filtrar el array
+            const filtro = products.filter((item) => item.category === categoryURL)
+            resolve (filtro);
+        }, 2500);
+    });
+    return promesa;
+}
+
+// ---------------------------------------------------
 function ItemListContainer(products) {
     const [product, setProducts] = useState ([]);
     
@@ -18,7 +45,7 @@ function ItemListContainer(products) {
     useEffect(
         () => {
             if (categoryid === undefined) {
-              // LOS LLAMADOS A FIREBASE VAN SIEMPRE DENTRO DE useEffect
+              // resolve
             getItems().then((respuesta) => {
             setProducts(respuesta)
                 })

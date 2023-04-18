@@ -6,7 +6,7 @@ const Provider = cartContext.Provider;
 
 //creamos el Provider
 export function CartProvider(props){
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]); // inicializamos cart como un estado vacío--
     const newCart = useDeepCopy(cart); //hacemos una copia del array cart en una variable newCart, para no modificar el original
     
     // cart -> inmutable

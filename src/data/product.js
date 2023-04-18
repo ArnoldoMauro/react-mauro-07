@@ -93,7 +93,7 @@ const products = [
 },
 {
   id: 11,
-  image: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/ruca-malen-merlot1-fdf85b951660df377b15895583264445-480-0.jpg'
+  image: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/069/568/products/ruca-malen-merlot1-fdf85b951660df377b15895583264445-480-0.jpg',
   title: 'Ruca Malen 2005',
   price: '$28.400',
   category: 'Merlot',
