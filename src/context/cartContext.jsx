@@ -37,10 +37,8 @@ export function CartProvider(props){
           const count = item.count ?? 0; // asignamos 0 si item.count es nulo o indefinido
         const price = item.price ?? 0; // asignamos 0 si item.price es nulo o indefinido
         total += count * price;
-        //   if (item.count && item.price && !isNaN(item.count) && !isNaN(item.price)) {
-        //     total += parseInt(item.count) * parseInt(item.price);  
+          
         });
-        console.log("array cart:", cart)
         return total;
     }      
     

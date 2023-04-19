@@ -1,6 +1,7 @@
 //------------------Firebase-------------------------------------
 import { initializeApp } from "firebase/app";
-import { getFirestore,collection, getDocs, doc, getDoc, query, where} from 'firebase/firestore';
+import { getFirestore,collection, getDocs, doc, getDoc, query, where, addDoc} from 'firebase/firestore';
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -45,7 +46,7 @@ export async function getSingleItem(idURL){
 export async function getItemsByCategory(categoryURL) {
   const productsRef = collection(db, "products");
   //crear una consulta a productsRef cuando la categoria sea la buscada
-  const q = query(productsRef, where("category", "==", categoryid));
+  const q = query(productsRef, where("category", "==", categoryURL));
 
   const productsSnap = await getDocs(q);
   const documents = productsSnap.docs;
@@ -53,4 +54,10 @@ export async function getItemsByCategory(categoryURL) {
     return {id: doc.id, ...doc.data()};
   });
   return docsData;
+}
+
+export async function createOrder(order){
+  const collectionsOrdersRef = collection(db, "orders");
+  const response = await addDoc(collectionsOrdersRef, order);
+  return response.id;
 }

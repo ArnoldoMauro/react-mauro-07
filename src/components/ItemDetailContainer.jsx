@@ -13,14 +13,14 @@ function ItemDetailContainer () {
     const [product, setProduct] = useState ({}); //useState actualiza el estado del componente 
     const [addedToCart, setaddedToCart] = useState(false);
     let {id} = useParams();
-    console.log("cart:", cart);
+    
     const {cart, addItem, getCountInCart} = useContext(cartContext);
    
     //la funcion useEffect() es para que el array se renderize una sola vez (sino se repite)
     useEffect(
         () => {
             // resolve
-            getSingleItems(id).then((respuesta) => {
+            getSingleItem(id).then((respuesta) => {
                 console.log("promesa cumplida", respuesta)
                 setProduct(respuesta)
             })

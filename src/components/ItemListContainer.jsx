@@ -10,48 +10,61 @@ import { getItems, getItemsByCategory } from '../services/firestore';
 
 function ItemListContainer(products) {
     const [product, setProducts] = useState ([]);
+    const [loader, setLoader]= useState(false)
     
     // ---- filtro por categorias ----
     const {categoryid} = useParams()
     
     //la funcion useEffect() es para que el array se renderize una sola vez (sino se repite)
     useEffect(
-        () => {
-            if (categoryid === undefined) {
-              // LOS LLAMADOS A FIREBASE VAN SIEMPRE DENTRO DE useEffect
-            getItems().then((respuesta) => {
+      () => {
+       
+          if (categoryid === undefined) {
+            // LOS LLAMADOS A FIREBASE VAN SIEMPRE DENTRO DE useEffect
+          getItems().then((respuesta) => {
+            setLoader(true)
             setProducts(respuesta)
-                })
+              })
+              .catch((error)=> console.log(error))
+              .finally(()=>setLoader(false))
 
-            } else {
-              getItemsByCategory(categoryid).then((respuesta) => 
-              setProducts(respuesta));
-            }
-        }, [categoryid]
-            )  
-        
-            // si el array products está vacìo, renderiza el componente <Loader />
-            if (products.length === 0) {
-          return <Loader />
-        }
+          } else {
+            getItemsByCategory(categoryid).then((respuesta) => {
+              setLoader(true)
+              setProducts(respuesta)
+            })
+            .catch((error)=> console.log(error))
+              .finally(()=>setLoader(false))
+          }
+      }, [categoryid]
+          )  
+      
+          // si el array products está vacìo, renderiza el componente <Loader />
+       
 
-    return (
+  return (
     <>
-    {product.map((products) => (
-      <Item
-      key={products.id}
-      id={products.id}
-      imagen={products.image} 
-      title={products.title}
-      price={products.price}
-      category={products.category}
-      offer={products.offer}
-      stock={products.stock}
-      />
-    ))
+          {
+      loader ? <Loader/> 
+      :<>
+      {product.map((products) => (
+        <Item
+        key={products.id}
+        id={products.id}
+        imagen={products.image} 
+        title={products.title}
+        price={products.price}
+        category={products.category}
+        offer={products.offer}
+        stock={products.stock}
+        />
+      ))
+      }
+          
+      </>
     }
-        
     </>
-    )
-  }
+  
+  )
+}
 export default ItemListContainer;

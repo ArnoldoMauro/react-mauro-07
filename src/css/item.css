@@ -90,3 +90,72 @@ img.disabled{
 .addtocart{
     align-items: center;
 }
+
+/* Estilos para la tabla de carrito */
+.cartList {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Estilos para la cabecera de la tabla de carrito */
+  .cartList_head {
+    background-color: #f8f8f8;
+  }
+  
+  /* Estilos para las filas de la tabla de carrito */
+  .cartList_row {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilos para las celdas de la tabla de carrito */
+  .cartList th,
+  .cartList td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  /* Estilos para las imágenes en la tabla de carrito */
+  .cartList img {
+    max-height: 50px;
+    max-width: 50px;
+  }
+  
+  /* Estilos para el botón de remover en la tabla de carrito */
+  .cartList Button {
+    background-color: #c63224;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el total en la tabla de carrito */
+  .cartList th:last-child {
+    text-align: right;
+  }
+
+  /* Estilos para el contenedor del detalle del carrito */
+  .cartList_detail {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Ajusta el margen superior según necesites */
+  }
+  
+  .container_btn {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
