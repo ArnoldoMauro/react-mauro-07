@@ -4,6 +4,7 @@ import {cartContext} from '../../context/cartContext';
 import { createOrder } from "../../services/firestore";
 import { useNavigate } from "react-router-dom";
 import '../../css/item.css';
+import FormCheckout from './FormCheckout';
 
 function CartContainer() {
     
@@ -13,10 +14,10 @@ function CartContainer() {
     const navigateTo = useNavigate();
     
     
-  async function handleCheckout(){
+  async function handleCheckout(userData){
     const order = {
       items: cart,
-      buyer: {name:"Arnoldo Mauro"},
+      buyer: userData,
       total: getPriceInCart(),
       date: new Date(), 
     }
@@ -52,13 +53,9 @@ return (
             <td>{item.count}</td>
 
             <td>
-            <Button color="#c63224" onPress={() => removeItem(item.id)}>
-              X
-            </Button>
-
-              {/* <Button color="#c63224" onPress={item.removeItem}>
+              <Button color="#c63224" onPress={() => removeItem(item.id)}>
                 X
-              </Button> */}
+              </Button>
             </td>
 
             <th>$ {item.price * item.count}</th>
@@ -73,9 +70,13 @@ return (
       
     </div>
     <br></br>
-    <div className="container_btn">
+    
+    <FormCheckout onCheckout={handleCheckout}/>
+    
+    
+    {/* <div className="container_btn">
       <Button color="lightblue" onPress={handleCheckout}>Finalizar compra</Button>
-    </div>
+    </div> */}
   </>
   );
   }  
