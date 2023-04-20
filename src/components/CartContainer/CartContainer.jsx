@@ -11,6 +11,7 @@ function CartContainer() {
     const context = useContext(cartContext);
     const cart = context.cart;
     const getPriceInCart = context.getPriceInCart;
+    const removeItem = context.removeItem;    
     const navigateTo = useNavigate();
     
     
@@ -26,11 +27,11 @@ function CartContainer() {
     navigateTo(`/checkout/${orderId}`);
     // clearCart()
   }
-
   
 // ------------------------------------
 return (
-  <> <h1>Tu carrito</h1>
+  <> <h2 className="title-center">Tu Carrito</h2>
+    <br></br>
     <table className="cartList">
       <thead className="cartList_head">
         <tr className="cartList_row">
@@ -73,10 +74,6 @@ return (
     
     <FormCheckout onCheckout={handleCheckout}/>
     
-    
-    {/* <div className="container_btn">
-      <Button color="lightblue" onPress={handleCheckout}>Finalizar compra</Button>
-    </div> */}
   </>
   );
   }  

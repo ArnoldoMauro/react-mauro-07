@@ -22,11 +22,9 @@ function Item({id, title, imagen, price, category, stock, offer}) {
     
   return (  
     <Link to={`/detail/${id}`}>   
-      <div className="item-card"
+      <div className="item-card centered-card" 
         id={id}> 
-        {/* <button onClick={handleFavorite} className={classNameFavorite}>
-         ♥
-        </button> */}
+        
         <div className='item-card_img'>
           <img className={stock === 0 && "disabled"} src={imagen} alt="Imagen del producto" />
         </div>
@@ -36,7 +34,7 @@ function Item({id, title, imagen, price, category, stock, offer}) {
           <h4>{title}</h4>
           <small style={{ color: "blue" }}>{category}</small>
           <br></br>
-          <h4>{price}</h4>
+          <h4>$ {price}</h4>
         </div>
     
         <div className='item-card_detail'>

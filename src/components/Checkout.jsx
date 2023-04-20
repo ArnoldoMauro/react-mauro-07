@@ -7,7 +7,7 @@ function Checkout() {
     <div>
       <h2>Gracias por tu compra</h2>
       <br></br>
-      <h4>Tu compra se realizó correctamente. Tu ticket es: {orderId}</h4>
+      <h4>Tu compra se realizó correctamente. Tu ticket es: { orderId }</h4>
     </div>
   )
 }

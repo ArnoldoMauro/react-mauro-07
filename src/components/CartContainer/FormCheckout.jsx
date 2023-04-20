@@ -18,7 +18,7 @@ export default function FormCheckout({onCheckout}){
     }
     
     function onSubmit(evt){
-      evt.PreventDefault();
+      evt.preventDefault();
       onCheckout(userData);  
     }
 
@@ -34,9 +34,10 @@ export default function FormCheckout({onCheckout}){
     return (
       <>
         <h3 className="title-center">Ingresa tus datos para completar la compra</h3>
+        <br></br>
         <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div className='form-group'>
-            <label className='label-input'>Nombre</label>
+          <div className='form-group' style={{ marginBottom: '10px' }}>
+            <label className='label-input' style={{ marginRight: '10px' }}>Nombre</label>
             <input 
               value={userData.username}
               name="username"
@@ -46,8 +47,8 @@ export default function FormCheckout({onCheckout}){
               />
           </div>
 
-          <div className='form-group'>
-            <label className='label-input'>Email</label>
+          <div className='form-group' style={{ marginBottom: '10px' }}>
+            <label className='label-input' style={{ marginRight: '10px' }}>Email</label>
             <input 
               value={userData.email}
               name="email"
@@ -57,8 +58,8 @@ export default function FormCheckout({onCheckout}){
               />
           </div>
 
-          <div className='form-group'>
-            <label className='label-input'>Telefono</label>
+          <div className='form-group' style={{ marginBottom: '10px' }}>
+            <label className='label-input' style={{ marginRight: '10px' }}>Telefono</label>
             <input 
               value={userData.phone}
               name="phone"
@@ -67,15 +68,16 @@ export default function FormCheckout({onCheckout}){
               onChange={handleInputChange}
               />
           </div>
+          <br></br>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button onClick={onSubmit} type="submit" style={{ borderRadius: "5px", backgroundColor: "#5bc1a6", marginLeft: "10px", padding: 8 }}>
+              Crear Orden
+            </button>
 
-          <button onClick={onSubmit} type="submit">
-            Crear Orden
-          </button>
-
-          <button onClick={clearFormData}>
-            Cancelar
-          </button>
-
+            <button onClick={clearFormData} style={{ borderRadius: "5px", backgroundColor: "#ffce55", marginLeft: "10px", padding: 8 }}>
+              Cancelar
+            </button>
+          </div>
         </form>
       </>
     )
