@@ -39,6 +39,7 @@ function ItemCount({onAddToCart}) {
           +
         </Button>
       </div>
+      <br></br>
       <div className='addtocart'>
         <Button color="cadetblue" onPress={handleAddToCart}> Agregar al Carrito</Button>
       </div>  

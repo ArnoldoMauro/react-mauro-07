@@ -25,9 +25,11 @@ function CartContainer() {
     const orderId = await createOrder(order);
     // redireccionar
     navigateTo(`/checkout/${orderId}`);
-    // clearCart()
+    clearCart() //vuelve a cero el estado del carrito cuando finaliza la compra
   }
   
+  
+
 // ------------------------------------
 return (
   <> <h2 className="title-center">Tu Carrito</h2>
@@ -47,7 +49,7 @@ return (
         { cart.map((item) => (
           <tr key={item.id} className="cartList_row">  
             <td>
-              <img height={50} src={item.image} alt={item.title} />
+              <img height={60} src={item.image} alt={item.title} />
             </td>        
             <td>{item.title}</td>
             <td>$ {item.price}</td>

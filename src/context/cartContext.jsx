@@ -41,13 +41,17 @@ export function CartProvider(props){
         });
         return total;
     }      
+
+    function clearCart() {
+      context.setCart([]); // Vaciamos el carrito llamando a la función setCart con un array vacío
+    }
     
     function removeItem(idToDelete){
       setCart(cart.filter((item) => item.id !== idToDelete));
     }
 
     return(
-        <Provider value={{ cart: cart, addItem: addItem, getPriceInCart, getCountInCart, removeItem }} > 
+        <Provider value={{ cart: cart, addItem: addItem, getPriceInCart, getCountInCart, removeItem, clearCart }} > 
             {props.children}
         </Provider>
     )
