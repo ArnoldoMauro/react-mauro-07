@@ -13,7 +13,7 @@ function CartContainer() {
     const getPriceInCart = context.getPriceInCart;
     const removeItem = context.removeItem;    
     const navigateTo = useNavigate();
-    
+    const {clearCart}= useContext(cartContext) //destructuring
     
   async function handleCheckout(userData){
     const order = {
@@ -23,9 +23,9 @@ function CartContainer() {
       date: new Date(), 
     }
     const orderId = await createOrder(order);
-    // redireccionar
+    
     navigateTo(`/checkout/${orderId}`);
-    clearCart() //vuelve a cero el estado del carrito cuando finaliza la compra
+    context.clearCart() //vuelve a cero el estado del carrito cuando finaliza la compra
   }
   
   
