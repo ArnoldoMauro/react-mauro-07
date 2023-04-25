@@ -7,13 +7,8 @@ import '../../css/item.css';
 import FormCheckout from './FormCheckout';
 
 function CartContainer() {
-    
-    const context = useContext(cartContext);
-    const cart = context.cart;
-    const getPriceInCart = context.getPriceInCart;
-    const removeItem = context.removeItem;    
+    const {cart, getPriceInCart,removeItem, clearCart } = useContext(cartContext);
     const navigateTo = useNavigate();
-    const {clearCart}= useContext(cartContext) //destructuring
     
   async function handleCheckout(userData){
     const order = {
@@ -23,9 +18,8 @@ function CartContainer() {
       date: new Date(), 
     }
     const orderId = await createOrder(order);
-    
+    clearCart() //vuelve a cero el estado del carrito cuando finaliza la compra
     navigateTo(`/checkout/${orderId}`);
-    context.clearCart() //vuelve a cero el estado del carrito cuando finaliza la compra
   }
   
   

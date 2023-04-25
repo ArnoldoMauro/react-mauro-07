@@ -43,7 +43,7 @@ export function CartProvider(props){
     }      
 
     function clearCart() {
-      context.setCart([]); // Vaciamos el carrito llamando a la función setCart con un array vacío
+      setCart([]); // Vaciamos el carrito llamando a la función setCart con un array vacío
     }
     
     function removeItem(idToDelete){
