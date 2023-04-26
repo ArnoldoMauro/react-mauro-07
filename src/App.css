@@ -26,7 +26,7 @@ body {
   height: 50px;
   padding-top: 15px;
   float: left;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .logo p a {
@@ -38,7 +38,7 @@ body {
   font-weight: bold;
   text-align: center;
   line-height: 80%;
-}
+} 
 
 .logo-text {
   text-align: center;
@@ -126,5 +126,6 @@ body {
   top: 600px;
 }
 
-
-
+.container-fluid{
+  background-color: rgb(245, 242, 242);
+}

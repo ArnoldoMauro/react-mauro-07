@@ -11,14 +11,13 @@ import CartContainer from './CartContainer/CartContainer';
 function BootstrapNavbar() {
   const {cart} = useContext(cartContext);
     return (
-       
         
   <div>
     <nav className="navbar fixed-top navbar-expand-lg bg-light "> 
       <div className='container-fluid' >
       
         <Link className="navbar-brand" to="/">
-        <img src ={logo} alt ='Bodega de Campo' width={70}/>
+        <img src ={logo} alt ='Bodega de Campo' width={120}/>
         </Link>
         
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,15 +48,22 @@ function BootstrapNavbar() {
             </li>
             
             {/* Formulario */}  
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="#">Contacto</Link>
+            </li> */}
+
+            {/* Logo */}
+            <li style={{listStyleType: "none", fontSize: "25px", marginLeft: "370px", fontFamily: "Roboto"}}>
+              BODEGA DE CAMPO - Tienda de vinos
             </li>
 
             {/* Cart */}
             <li>
-              <Link className="nav-link" to="/cart">Cart</Link>   
+              <Link className="nav-link" to="/cart" style={{color: "black", marginLeft: "550px"}}>CARRITO</Link>   
             </li>            
           </ul>
+          
+          
           
           {/* CartWidget */}
           <div className="cart-menu align-items-center d-flex">
@@ -65,7 +71,7 @@ function BootstrapNavbar() {
               <ul>
                 <li>
                   <div className="cart-icono">
-                    <img src ={carrito} alt ='icono carrito' width={30}/>
+                    <img src ={carrito} alt ='icono carrito' width={35}/>
                     <span id="cart_menu_num" data-action="cart-can" className="badge rounded-circle">{cart.length}</span>
                   </div> 
                 </li>

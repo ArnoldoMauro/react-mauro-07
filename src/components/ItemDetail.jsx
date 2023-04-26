@@ -1,6 +1,5 @@
 import React from 'react';
 import ItemCount from './ItemCount';
-// import {handleAddToCart} from './ItemDetailContainer'
 
 function ItemDetail({product, handleAddToCart}) {
     return (

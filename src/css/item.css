@@ -1,155 +1,167 @@
 a{
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .price-discount{
-    color:rgb(171, 223, 87);
+  color:rgb(171, 223, 87);
 } 
 
 .font-xl{
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .item-card{
-    display:inline-block;
-    color: black;
-    text-align: center;
-    justify-content: center;
-    margin: 10px 15px;
-    padding-bottom: 25px;
-    height: 450px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 3px;
-    background-color: #989fa7;
-    overflow: hidden; 
-    transition: all 0.20s;
-    cursor: pointer;
+  display:inline-block;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 15px;
+  padding-bottom: 25px;
+  height: 450px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px;
+  background-color: #989fa7;
+  overflow: hidden; 
+  transition: all 0.20s;
+  cursor: pointer;
 }
 
 .item-card_header{
-    /* background-color: #233; */
-    color: #000;
-    font-size: medium;
+  /* background-color: #233; */
+  color: #000;
+  font-size: medium;
 }
 
 .item-card_header h2{
-    padding: 16px 2px;
-    margin: 0px;
-    z-index: -1;
-    color:black;
+  padding: 16px 2px;
+  margin: 0px;
+  z-index: -1;
+  color:black;
 }
 
 .item-card_img{
-    
-    width: 300px;
-    height: 290px; 
-    object-fit: cover;
+  
+  width: 300px;
+  height: 290px; 
+  object-fit: cover;
 }
 
 .item-card_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 img.disabled{
-    filter: grayscale(0.9);
+  filter: grayscale(0.9);
 }
 
 .item-card:hover{
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 01);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 01);
 }
 .item-card_detail{
-    height: 100px;
-    display: none;
-    padding: 10px;
-    color: black;
+  height: 100px;
+  display: none;
+  padding: 10px;
+  color: black;
 } 
 
 .container-btn{
-    display:flex;
-    align-items: center;
-    
+  display:flex;
+  align-items: center;
+  
 }
 .substract{
-    padding-left: 45%;
+  padding-left: 45%;
 }
 
 .count{
-    padding-left: 3%;
-    font-size: 20px;
-    color: white;
+  padding-left: 3%;
+  font-size: 20px;
+  color: white;
 }
 
 .add{
-    padding-left: 3%;
+  padding-left: 3%;
 }
 
 .addtocart{
-    align-items: center;
+  align-items: center;
 }
 
 /* Estilos para la tabla de carrito */
 .cartList {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  /* Estilos para la cabecera de la tabla de carrito */
-  .cartList_head {
-    background-color: #f8f8f8;
-  }
-  
-  /* Estilos para las filas de la tabla de carrito */
-  .cartList_row {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* Estilos para las celdas de la tabla de carrito */
-  .cartList th,
-  .cartList td {
-    padding: 12px;
-    text-align: center;
-  }
-  
-  /* Estilos para las imágenes en la tabla de carrito */
-  .cartList img {
-    max-height: 50px;
-    max-width: 50px;
-  }
-  
-  /* Estilos para el botón de remover en la tabla de carrito */
-  .cartList Button {
-    background-color: #c63224;
-    color: #fff;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el total en la tabla de carrito */
-  .cartList th:last-child {
-    text-align: right;
-  }
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  /* Estilos para el contenedor del detalle del carrito */
-  .cartList_detail {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin-top: 20px; /* Ajusta el margen superior según necesites */
-  }
-  
-  .container_btn {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-  }
+/* Estilos para la cabecera de la tabla de carrito */
+.cartList_head {
+  background-color: #f8f8f8;
+}
 
-  .title-center {
-    text-align: center;
-  }
+/* Estilos para las filas de la tabla de carrito */
+.cartList_row {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para las celdas de la tabla de carrito */
+.cartList th,
+.cartList td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Estilos para las imágenes en la tabla de carrito */
+.cartList img {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+/* Estilos para el botón de remover en la tabla de carrito */
+.cartList Button {
+  background-color: #c63224;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para el total en la tabla de carrito */
+.cartList th:last-child {
+  text-align: right;
+}
+
+/* Estilos para el contenedor del detalle del carrito */
+.cartList_detail {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 20px; /* Ajusta el margen superior según necesites */
+}
+
+.container_btn {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.title-center {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
