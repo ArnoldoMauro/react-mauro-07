@@ -47,23 +47,17 @@ function BootstrapNavbar() {
               <Link className="nav-link" aria-current="/categorys/Merlot" to="/categorys/Merlot">Merlot</Link>
             </li>
             
-            {/* Formulario */}  
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="#">Contacto</Link>
-            </li> */}
 
             {/* Logo */}
-            <li style={{listStyleType: "none", fontSize: "25px", marginLeft: "370px", fontFamily: "Roboto"}}>
-              BODEGA DE CAMPO - Tienda de vinos
+            <li className="nav-logo" style={{listStyleType: "none", fontSize: "20px", marginLeft: "380px", fontFamily: "Monserrat"}}>
+              BODEGA DE CAMPO
             </li>
 
             {/* Cart */}
             <li>
-              <Link className="nav-link" to="/cart" style={{color: "black", marginLeft: "550px"}}>CARRITO</Link>   
+              <Link className="nav-link" to="/cart" style={{color: "black", marginLeft: "600px"}}>Carrito</Link>   
             </li>            
           </ul>
-          
-          
           
           {/* CartWidget */}
           <div className="cart-menu align-items-center d-flex">

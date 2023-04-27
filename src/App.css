@@ -127,5 +127,28 @@ body {
 }
 
 .container-fluid{
-  background-color: rgb(245, 242, 242);
+  background-color: rgb(165, 148, 92);
+}
+
+.nav-logo {
+  list-style-type: none;
+  font-family: 'Montserrat';
+  font-size: 22px;
+  margin-left: 380px;
+  color:rgb(5, 55, 83);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-logo {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+  .nav-logo {
+    margin-left: 20px; /* Ajusta el margen a tu preferencia */
+    font-size: 15px; /* Ajusta el tamaño de fuente a tu preferencia */
+  }
 }
